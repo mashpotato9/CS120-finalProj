@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Itinerary</h1>
+        <div id="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="register()">Register</button>
+        </div>
+        <div id="user-info">
+            Logged in as: <span id="logged-user"></span>
+            <button onclick="logout()">Logout</button>
+            <button id="view-saved-places-btn">View Saved Places</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="search-panel">
+            <h2>Find Nearby Places</h2>
+            <input type="text" id="location" placeholder="Enter a location">
+            <select id="place-type">
+                <option value="tourist_attraction">Tourist Attractions</option>
+                <option value="restaurant">Restaurants</option>
+                <option value="museum">Museums</option>
+                <option value="park">Parks</option>
+                <option value="shopping_mall">Shopping Malls</option>
+                <option value="night_club">Night Clubs</option>
+                <option value="cafe">Cafes</option>
+            </select>
+            <button id="find-places-btn">Find Nearby Places</button>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="places-list"></div>
+        <div id="saved-places-list" style="display: none;"></div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo-6bcnYW1oiJWfH3zYjk4PE7ZiOL9Yfs&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>
