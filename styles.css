@@ -102,3 +102,13 @@ main {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+@media screen and (max-width: 600px) {
+  #map {
+    height: 300px; 
+  }
+  
+  #search-panel, #places-list, #saved-places-list {
+    width: 100%; 
+  }
+}
